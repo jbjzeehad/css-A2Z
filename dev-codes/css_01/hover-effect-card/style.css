@@ -1,0 +1,73 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #080808;
+  --text-color: #ffffff;
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background: var(--primary-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 18px;
+  border: 6px solid #afcee2;
+  border-radius: var(--border-radius);
+}
+
+.cards .red {
+  background-color: #ea4646;
+}
+.cards .blue {
+  background-color: #4d7fb4;
+}
+.cards .green {
+  background-color: #4e9973;
+}
+.cards .purple {
+  background-color: #814e99;
+}
+
+.cards .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.card p {
+  font-family: serif;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+.card:hover {
+  transform: scale(1.1, 1.2);
+}
+
+.cards:hover > .card:not(:hover) {
+  transform: scale(0.9, 0.9);
+  filter: blur(3px);
+}
