@@ -4,11 +4,13 @@
   --text-color: #ffffff;
   --border-radius: 8px;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Cambria, Cochin, Georgia, Times, serif;
   background: var(--primary-color);
@@ -17,4 +19,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.stars {
+  display: inline-block;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  font-size: 50px;
+  user-select: none;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.stars input :checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: rgb(150, 55, 157);
 }
